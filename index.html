@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Interno - Veloz</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-white shadow p-6 text-center">
+    <h1 class="text-3xl font-bold">Portal Interno Veloz</h1>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <!-- Seção 1: Formularios -->
+    <section class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-2xl font-semibold mb-4">Formulários</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="https://forms.gle/aydSc4ka4h5nJg7RA" target="_blank" class="block bg-blue-600 text-white text-center p-4 rounded-xl font-semibold hover:bg-blue-700 transition">Prospecção Construção Civil & Visitas Técnicas</a>
+
+        <a href="https://forms.gle/MwoQ8o3iQKN5ZHPA8" target="_blank" class="block bg-green-600 text-white text-center p-4 rounded-xl font-semibold hover:bg-green-700 transition">Roteiro de Visita Externa & Clientes</a>
+      </div>
+    </section>
+
+    <!-- Seção 2: WhatsApp -->
+    <section class="bg-white p-6 rounded-2xl shadow">
+      <h2 class="text-2xl font-semibold mb-4">Contatos Rápidos</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="https://wa.me/559192831910" target="_blank" class="block bg-green-500 text-white p-4 rounded-xl text-center font-semibold hover:bg-green-600 transition">Falar com João Luiz – Gerente Comercial</a>
+
+        <a href="https://wa.me/559191994721" target="_blank" class="block bg-green-500 text-white p-4 rounded-xl text-center font-semibold hover:bg-green-600 transition">Falar com Pedro – T.I</a>
+
+        <a href="https://wa.me/559192406643" target="_blank" class="block bg-green-500 text-white p-4 rounded-xl text-center font-semibold hover:bg-green-600 transition">Falar com Pedro – Marketing</a>
+      </div>
+    </section>
+
+<!-- Seção 3: Planilhas -->
+<section class="bg-white p-6 rounded-2xl shadow">
+  <h2 class="text-2xl font-semibold mb-4">Planilhas</h2>
+  <p class="mb-4">Escolha qual planilha deseja visualizar:</p>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <button 
+      onclick="document.getElementById('meu-iframe').src='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7hN9rFjlTmSsldPbKtnvmpzxOAJHeO5PBA4p_84F05OBlGtcNscE6-TkbWzzOuY2rV_TN_ETj5aqa/pubhtml?gid=972194377&single=true&widget=true&headers=false'; 
+      window.scrollTo(0,document.body.scrollHeight);"
+      class="bg-purple-600 text-white p-4 rounded-xl font-semibold hover:bg-purple-700 transition">
+      Ver Planilha 1
+    </button>
+
+    <button 
+      onclick="document.getElementById('meu-iframe').src='https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7hN9rFjlTmSsldPbKtnvmpzxOAJHeO5PBA4p_84F05OBlGtcNscE6-TkbWzzOuY2rV_TN_ETj5aqa/pubhtml?gid=1087233303&single=true&widget=true&headers=false'; 
+      window.scrollTo(0,document.body.scrollHeight);"
+      class="bg-purple-600 text-white p-4 rounded-xl font-semibold hover:bg-purple-700 transition">
+      Ver Planilha 2
+    </button>
+  </div>
+
+  <!-- Botões de Tela Cheia -->
+  <div class="flex gap-4 mt-6">
+    <button 
+      onclick="expandIframe()"
+      class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition">
+      Tela Cheia
+    </button>
+
+    <button 
+      onclick="normalizeIframe()"
+      class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition">
+      Minimizar
+    </button>
+  </div>
+
+  <div class="mt-6">
+    <iframe id="meu-iframe" src="" class="w-full h-96 rounded-xl border transition-all duration-300"></iframe>
+  </div>
+</section>
+
+<script>
+  function expandIframe() {
+    const iframe = document.getElementById('meu-iframe');
+    iframe.style.height = "90vh"; // aumenta
+    window.scrollTo(0, 0);        // sobe para mostrar a tela cheia
+  }
+
+  function normalizeIframe() {
+    const iframe = document.getElementById('meu-iframe');
+    iframe.style.height = "24rem"; // volta ao original (h-96 = 24rem)
+  }
+</script>
+
+</section>
+
+</main>
+
+<footer class="text-center p-6 text-sm text-gray-600">Veloz Tintas © 2025</footer>
+</body>
+</html>
